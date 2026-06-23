@@ -156,30 +156,35 @@ let examplesExpanded=false;
 const emptyTemplate={mobs:[]};
 const exampleData={
   "MCA Villagers": {
-    mobs: [
-      {mobId:"mca:male_villager", forceGender:"male", sterileChance:0},
-      {mobId:"mca:female_villager", forceGender:"female", sterileChance:0},
-      {mobId:"mca:male_zombie_villager", forceGender:"male", sterileChance:0},
-      {mobId:"mca:female_zombie_villager", forceGender:"female", sterileChance:0}
+    "mobs": [
+      { "mobId": "mca:male_villager", "forceGender": "male", "sterileChance": 0 },
+      { "mobId": "mca:female_villager", "forceGender": "female", "sterileChance": 0 },
+      { "mobId": "mca:male_zombie_villager", "forceGender": "male", "sterileChance": 0 },
+      { "mobId": "mca:female_zombie_villager", "forceGender": "female", "sterileChance": 0 }
     ]
   },
   "Naturalist Lion": {
-    mobs: [{
-      mobId:"naturalist:lion",
-      colors:{baby:"0xFFAA55"},
-      rules:[
-        {method:"isBaby",expected:true,gender:"baby"},
-        {method:"hasMane",expected:true,gender:"male"},
-        {method:"hasMane",expected:false,gender:"female"}
-      ]
-    }]
+    "mobs": [
+      {
+        "mobId": "naturalist:lion",
+        "useGlobalSterile": true,
+        "colors": { "baby": "0xFFAA55" },
+        "rules": [
+          { "method": "isBaby", "expected": true, "gender": "baby" },
+          { "method": "hasMane", "expected": true, "gender": "male" },
+          { "method": "hasMane", "expected": false, "gender": "female" }
+        ]
+      }
+    ]
   },
   "Environmental Deer": {
-    mobs: [{
-      mobId:"environmental:deer",
-      rules:[
-        {method:"hasAntlers",expected:true,gender:"male"},
-        {method:"hasAntlers",expected:false,gender:"female"}
+    "mobs": [
+      {
+        "mobId": "environmental:deer",
+        "useGlobalSterile": true,
+        "rules": [
+          { "method": "hasAntlers", "expected": true, "gender": "male" },
+          { "method": "hasAntlers", "expected": false, "gender": "female" }
       ]
     }]
   }
